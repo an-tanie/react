@@ -1,3 +1,3 @@
-export default function Category({category}){
-    return <a href="#" className="category">{category}</a>
+export default function Category({category,select}){
+    return <button onClick={select} className="category">{category}</button>
 }
