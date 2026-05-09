@@ -21,7 +21,7 @@ function App() {
   },[searchValue])
 
   useEffect(()=>{
-    fetch('https://dummyjson.com/products/category-list')
+    fetch('https://dummyjson.com/products/categories')
     .then(res => res.json())
     .then(res => setCategory(res));
   },[])
@@ -33,7 +33,7 @@ function App() {
       </div>
       <div className='categories'>
         {category.map((c) => (
-          <Category key={c.id} category={c}/>
+          <Category key={c.id} category={c.name}/>
         ))}
       </div>
 
